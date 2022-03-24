@@ -107,5 +107,3 @@ void print_array(int array[], int array_size)
     std::cout << std::endl
               << std::endl;
 }
-
-//hfhdsfd
