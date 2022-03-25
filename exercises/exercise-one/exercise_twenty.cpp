@@ -1,13 +1,20 @@
 #include <iostream>
 
 int main() {
-    int number = 0;
-    int base;
+
+    int row = 0;
+
     std::cout << "Enter how many rows of stars to print: ";
-    scanf("%d", &number);
+    scanf("%d", &row);
 
-    for (int i = 0; i < number; i) {
+    for (int counter = 0; counter <= row ; counter++) {
+        for (int space = counter; space < row; space++) {
+            std::cout << " ";
+        }
+        for (int star = (counter + (counter - 1)); star > 0; star--) {
+            std::cout << "*";
+        }
+        std::cout << std::endl;
     }
-
 
 }
