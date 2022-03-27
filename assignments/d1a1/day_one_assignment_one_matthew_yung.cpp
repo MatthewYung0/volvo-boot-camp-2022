@@ -22,7 +22,7 @@ int main()
     std::cout << "Before Selection Sort" << std::endl;
     print_array(selection_sort_array, selection_sort_array_size);
     std::cout << "After Selection Sort" << std::endl;
-    bubble_sort(selection_sort_array, selection_sort_array_size);
+    selection_sort(selection_sort_array, selection_sort_array_size);
 
     // Return values
     unsigned char lower_value = 5;
