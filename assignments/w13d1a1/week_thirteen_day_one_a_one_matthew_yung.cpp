@@ -19,7 +19,7 @@ private:
     std::string services[5];     // name of services were performed.
     std::string parts[5];        // Name of parts changed (brake pads, tires)
     payment_method payment_type; // Type of payment made (i.e. credit, cash)
-    int payment_amount;          // Payment amount (WHEN CHANGED TO FLOAT ON ENTIRE CODE, OUTPUT NOT CORRECT)
+    float payment_amount;          // Payment amount (WHEN CHANGED TO FLOAT ON ENTIRE CODE, OUTPUT NOT CORRECT)
 public:
     Record(){};
     // Intialising all variables except services and parts since it is an array
@@ -50,7 +50,7 @@ public:
     {
         this->payment_type = payment_type;
     }
-    void setPaymentAmount(int payment_amount)
+    void setPaymentAmount(float payment_amount)
     {
         this->payment_amount = payment_amount;
     }
@@ -97,7 +97,7 @@ public:
     {
         return this->date;
     }
-    int getPaymentAmount()
+    float getPaymentAmount()
     {
         return this->payment_amount;
     }
@@ -162,7 +162,7 @@ Record *createNewRecord()
     long date = 0;
     int number_of_services = 0;
     int payment_type;
-    int payment_amount = 0;
+    float payment_amount = 0;
 
     Record *new_record_ptr = new Record;
 
