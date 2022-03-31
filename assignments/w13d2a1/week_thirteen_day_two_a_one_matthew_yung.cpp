@@ -6,10 +6,8 @@ protected:
     float area;
     float perimeter;
 public:
-
     virtual double getArea() = 0;
     virtual double getPerimeter() = 0;
-
     // If shape_one < shape_two, return true;
     friend bool operator<(const Shape &shape_one, const Shape &shape_two)
     {
@@ -32,7 +30,6 @@ class Circle : public Shape
 protected:
 float radius;
 public:
-
     Circle(float radius)
     {
         this->radius = radius;
@@ -61,7 +58,6 @@ protected:
     float length_one;
     float length_two;
     float length_three;
-
 public:
     Triangle(float length_one, float length_two, float length_three)
     {
@@ -92,7 +88,6 @@ class Rectangle : public Shape
 protected:
     float length_one;
     float length_two;
-
 public:
     Rectangle(float length_one, float length_two)
     {
@@ -121,7 +116,6 @@ class Square : public Shape
 {
 protected:
   float length;  
-
 public:
     Square(float length)
     {
@@ -175,5 +169,4 @@ int main()
 
     bool circle_one_versus_circle_two = circle_one == circle_two;
     std::cout << circle_one_versus_circle_two << std::endl;
-
 }
