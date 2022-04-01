@@ -1,4 +1,4 @@
-#include <iostream>
+    #include <iostream>
 #include <string.h>
 
 // Enum for holding payment method types.
@@ -19,7 +19,7 @@ private:
     std::string services[5];     // name of services were performed.
     std::string parts[5];        // Name of parts changed (brake pads, tires)
     payment_method payment_type; // Type of payment made (i.e. credit, cash)
-    float payment_amount;          // Payment amount (WHEN CHANGED TO FLOAT ON ENTIRE CODE, OUTPUT NOT CORRECT)
+    float payment_amount;        // Payment amount
 public:
     Record(){};
     // Intialising all variables except services and parts since it is an array
