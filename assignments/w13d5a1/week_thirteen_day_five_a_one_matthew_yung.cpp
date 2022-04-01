@@ -1,35 +1,53 @@
 #include <iostream>
+#include <cstdint>
+#include <cstring>
 
 const size_t SIZE = 10;
 
 int function() {
-    return std::rand();
+    int r = std::rand();
+    return r;
 }
 // MUST FILL THE ARRAY FRON THE LAST INDEX
 int *fillArray() {
-    int *a = new int[SIZE];
+    static int a[SIZE];
     size_t i = SIZE;// YOU ARE NOT SUPPOSE TO CHANGE THIS    
-    for (i = SIZE - 1; i > 0; --i) {
+    for (i =  SIZE - 1; (int) i >= 0; i--) {
         a[i] = function();        
     }
     return a;
 }
 void printArray(int a[SIZE]) {        
     for (size_t i = 0; i < SIZE; i++) {
-        std::cout << a[i]+i << std::endl;
+        std::cout << a[i] << std::endl;
     }
 }
 void printBool (bool _b) {
-    if (_b = true) {
+    if (_b == true) {
         std::cout << "VALUE is TRUE" << std::endl;        
-    } else if (_b = false)    {
+    } else if (_b == false)    {
         std::cout << "VALUE is FALSE" << std::endl;        
     }    
 }
 // YOU ARE NOT ALLOWED TO CHANGE THE RETURN TYPE
 void resizeForMe(char *a, size_t _newSize) {
-    delete a;
-    a = new char[_newSize];
+
+    *a = 
+
+    // char *temp_ptr = NULL;
+    // char *b = new char[_newSize];
+
+    // delete [] a;
+    // a = temp_ptr;
+    // temp_ptr = 0;
+
+    // char* newArr = new char[_newSize];
+    
+
+    // delete [] a;
+    // a = newArr;
+
+
 }
 
 // YOU SHALL NOT CHANGE THE MAIN FUNCTION
