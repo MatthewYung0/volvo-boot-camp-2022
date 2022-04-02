@@ -19,7 +19,7 @@ int *fillArray() {
 }
 void printArray(int a[SIZE]) {        
     for (size_t i = 0; i < SIZE; i++) {
-        std::cout << a[i] << std::endl;
+        std::cout << *(a + i) << std::endl;
     }
 }
 void printBool (bool _b) {
