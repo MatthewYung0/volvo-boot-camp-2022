@@ -31,30 +31,16 @@ void printBool (bool _b) {
 }
 // YOU ARE NOT ALLOWED TO CHANGE THE RETURN TYPE
 void resizeForMe(char *a, size_t _newSize) {
-
-    *a = 
-
-    // char *temp_ptr = NULL;
-    // char *b = new char[_newSize];
-
-    // delete [] a;
-    // a = temp_ptr;
-    // temp_ptr = 0;
-
-    // char* newArr = new char[_newSize];
-    
-
-    // delete [] a;
-    // a = newArr;
-
-
+    char *newArr = new char[_newSize];
+    delete[] a;
+    a = newArr;
 }
 
 // YOU SHALL NOT CHANGE THE MAIN FUNCTION
 int main() {
     printArray(fillArray());
     printBool(false);
-    char *a = new char[SIZE];        
+    char *a = new char[SIZE];
     for (size_t i = 0; i<SIZE; i++) i%2 ? a[i] = 'A' : a[i] = 'D';    
     std::cout << "Size is: " << a << std::endl;
     resizeForMe(a,100);
