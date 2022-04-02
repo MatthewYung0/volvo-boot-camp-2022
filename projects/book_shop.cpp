@@ -326,6 +326,7 @@ void run()
         }
         }
     }
+    delete [] books;
 }
 
 int main()
