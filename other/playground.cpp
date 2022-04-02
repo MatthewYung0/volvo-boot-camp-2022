@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cassert>
 using namespace std;
 
 void printNumber(int *nptr) {
@@ -60,25 +61,30 @@ int main() {
     print(&letter, 'c');
     print(&num, 'i'); */
 
-    int numbers[5] = {2,3,5,7,9};
-    // cout << numbers << endl; //address of first element in the array.
-    // cout << &numbers[0] << endl; // Same as above. Address of element above at index 0.
-    // cout << numbers[2] << endl; // Prints out the element at index 2.
-    // cout << *(numbers + 2) << endl; // dereferences, and prints out the element at index 2.
+    // int numbers[5] = {2,3,5,7,9};
+    // // cout << numbers << endl; //address of first element in the array.
+    // // cout << &numbers[0] << endl; // Same as above. Address of element above at index 0.
+    // // cout << numbers[2] << endl; // Prints out the element at index 2.
+    // // cout << *(numbers + 2) << endl; // dereferences, and prints out the element at index 2.
 
-    int min = 0;
-    int max = 1;
+    // int min = 0;
+    // int max = 1;
 
-    cout << "Before" << endl;
-    cout << min << endl;
-    cout << max << endl;
+    // cout << "Before" << endl;
+    // cout << min << endl;
+    // cout << max << endl;
 
-    getMinAndMax(numbers, 5, &min, &max);
+    // getMinAndMax(numbers, 5, &min, &max);
 
-    cout << "After" << endl;;
-    cout << min << endl;
-    cout << max << endl;
+    // cout << "After" << endl;;
+    // cout << min << endl;
+    // cout << max << endl;
     
-    system("pause>0");
+    // system("pause>0");
+
+    int *a = nullptr;
+    assert(a=nullptr);
+
+
 
 }
