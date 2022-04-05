@@ -1,5 +1,7 @@
 #include <iostream>
 #include <cassert>
+#include <cstdlib>
+#include <cmath>
 using namespace std;
 
 void printNumber(int *nptr)
@@ -111,5 +113,7 @@ int main()
     // int *a = nullptr;
     // assert(a=nullptr);
 
+    char commas;
+    
 
 }

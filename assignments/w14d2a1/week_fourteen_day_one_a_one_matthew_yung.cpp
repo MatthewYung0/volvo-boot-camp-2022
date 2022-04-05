@@ -139,50 +139,44 @@ public:
     }
 };
 
-void greaterThan(std::string title, Circle circle_one, Circle circle_two)
+template <class T1, class T2>
+bool isEqual(T1 const &a, T2 const &b)
 {
-    std::cout << "TEST: " << title << std::endl;
-    if (circle_one > circle_two)
-    {
-        std::cout << "TRUE\n\n";
-    }
-    else
-    {
-        std::cout << "FALSE\n\n";
-    }
+    return a == b;
+};
+
+template <class T1, class T2>
+bool isGreaterThan(T1 const &a, T2 const &b)
+{
+    return a > b;
 }
 
-void lessThan(std::string title, Circle circle_one, Circle circle_two)
+template <class T1, class T2>
+bool isLessThan(T1 const &a, T2 const &b)
 {
-    std::cout << "TEST: " << title << std::endl;
-    if (circle_one < circle_two) {
-        std::cout << "TRUE\n\n";
-    }
-    else {
-        std::cout << "FALSE\n\n";
-    }
-}
-
-void equalTo(std::string title, Circle circle_one, Circle circle_two)
-{
-    std::cout << "TEST: " << title << std::endl;
-    if (circle_one == circle_two)
-    {
-        std::cout << "TRUE\n\n";
-    }
-    else
-    {
-        std::cout << "FALSE\n\n";
-    }
+    return a < b;
 }
 
 int main() {
-    Circle circle_one(0);
-    circle_one.setArea();
-    Circle circle_two(0);
-    circle_two.setArea();
 
-    greaterThan("(AREA)             CIRCLE_ONE > CIRCLE_TWO", circle_one, circle_two);
-    lessThan("(AREA)             CIRCLE_ONE < CIRCLE_TWO", circle_one, circle_two);
-    equalTo("(AREA & PERIMETER) CIRCLE_ONE == CIRCLE_TWO", circle_one, circle_two);
+    Circle circle_one(0);
+    Circle circle_two(0);
+    Square square_one(1);
+    Triangle triangle_one(1,1,1);
+
+    circle_one.setArea();
+    circle_one.setPerimeter();
+    circle_two.setArea();
+    circle_two.setPerimeter();
+    square_one.setArea();
+    square_one.setPerimeter();
+    triangle_one.setArea();
+    triangle_one.setPerimeter();
+
+    std::cout << "circle_one is equal to circle_two: " << isEqual(circle_one, circle_two) << std::endl;
+    std::cout << "circle_one is equal to square_one: " << isEqual(circle_one, square_one) << std::endl;
+    std::cout << "square_one is less than triangle_one: " << isLessThan(square_one, triangle_one) << std::endl;
+    std::cout << "triangle_one is greater than square_one: " << isLessThan(triangle_one, square_one) << std::endl;
+
+
 }
