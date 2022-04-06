@@ -25,7 +25,7 @@ int main()
 
     // Generating random numbers between 0-33 10000 times, and adding to number_list
     int number = 0;
-    for (int counter = 0; counter < 10001; counter++)
+    for (int counter = 0; counter < 10000; counter++)
     {
         number = generateRandomNum(0, 33);
         if (number_list.find(number) != number_list.end())
