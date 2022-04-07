@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstring>
 #include <string.h>
+#include <vector>
 
 class Book
 {
@@ -97,8 +98,7 @@ void printMenu()
     std::cout << "2. Buy Book" << std::endl;
     std::cout << "3. Search for Book" << std::endl;
     std::cout << "4. Edit Details Of Book" << std::endl;
-    std::cout << "5. Exit" << std::endl
-              << std::endl;
+    std::cout << "5. Exit" << std::endl << std::endl;
     std::cout << "Enter your choice: ";
 }
 
@@ -283,17 +283,20 @@ void changeBookDetails(Book books[], int books_size)
     std::cout << "\nBook does not exist!\n";
 }
 
+void importBookList() {
+
+}
+
+void exportBookList() {
+    
+}
+
 void run()
 {
     int user_selection = 0;
-    int number_of_records = 0;
-
-    // User defining how big array will be.
-    std::cout << "Enter how many records will be stored: ";
-    std::cin >> number_of_records;
 
     // Array to hold book objects.
-    Book books[number_of_records];
+    std::vector<Book> books;
 
     while (user_selection != 5)
     {
