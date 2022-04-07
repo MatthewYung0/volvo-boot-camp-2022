@@ -52,4 +52,5 @@ int main()
     std::cout << "Enter the number you want to search for: ";
     std::cin >> number;
     findBounds(number, &list);
+    
 }
