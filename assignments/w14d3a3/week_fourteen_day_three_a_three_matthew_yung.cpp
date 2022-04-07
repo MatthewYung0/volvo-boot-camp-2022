@@ -13,7 +13,6 @@ int generateRandomNum(int min, int max)
 
 void findBounds(const int number, const std::set<int> *set)
 {
-
     // Check to see if number exists in set first.
     std::set<int>::iterator it = --set->end();
     if (number > *it)
@@ -27,7 +26,6 @@ void findBounds(const int number, const std::set<int> *set)
         std::cout << number << " exceeds the lowest number in the set which is " << *(set->begin()) << std::endl;
         return;
     }
-
     // Finds the lower bound in the set and prints it out.
     it = --set->lower_bound(number);
     std::cout << "The closest smallest number is " << *it << std::endl;
@@ -38,7 +36,6 @@ void findBounds(const int number, const std::set<int> *set)
 
 int main()
 {
-
     // Creating a set called list.
     std::set<int> list;
 
@@ -47,15 +44,12 @@ int main()
     {
         list.insert(generateRandomNum(1, 10000));
     }
-
     // Code below prints out numbers in set.
-/*     for (std::set<int>::iterator it = list.begin(); it != list.end(); it++) {
-            std::cout << *it << std::endl;
-        } */
-
+    /*     for (std::set<int>::iterator it = list.begin(); it != list.end(); it++) {
+                std::cout << *it << std::endl;
+            } */
     int number = 0;
     std::cout << "Enter the number you want to search for: ";
     std::cin >> number;
-
     findBounds(number, &list);
 }
