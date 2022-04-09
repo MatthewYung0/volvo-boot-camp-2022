@@ -2,6 +2,9 @@
 #include <cstring>
 #include <string.h>
 #include <vector>
+#include <fstream>
+
+// Note: book_list is automatically imported from folder when program is started.
 
 class Book
 {
@@ -70,6 +73,14 @@ public:
                 (book_one.title_name == book_two.title_name));
     }
 
+    void printDetails() {
+        std::cout << "\nTitle: " << getTitleName(); std::cout << std::endl;
+        std::cout << "Author: " << getAuthorName(); std::cout << std::endl;
+        std::cout << "Publisher: " << getPublisherName(); std::cout << std::endl;
+        std::cout << "Price: " << getPrice(); std::cout << std::endl;
+        std::cout << "Number Of Copies: " << getNumberOfCopies(); std::cout << std::endl;
+    }
+
     void updateVariables()
     {
         // Requesting user input to initialise variables
@@ -98,7 +109,9 @@ void printMenu()
     std::cout << "2. Buy Book" << std::endl;
     std::cout << "3. Search for Book" << std::endl;
     std::cout << "4. Edit Details Of Book" << std::endl;
-    std::cout << "5. Exit" << std::endl << std::endl;
+    std::cout << "5. Print out details of all books" << std::endl;
+    std::cout << "6. Export details to book list" << std::endl;
+    std::cout << "0. Exit" << std::endl << std::endl;
     std::cout << "Enter your choice: ";
 }
 
@@ -113,7 +126,7 @@ void printEditDetailsMenu()
     std::cout << "Enter your choice: ";
 }
 
-void addBookToArray(Book books[], int books_size, Book book)
+void addBookToArray(std::vector<Book>& books, int books_size, Book book)
 {
     for (int i = 0; i < books_size; i++)
     {
@@ -123,10 +136,10 @@ void addBookToArray(Book books[], int books_size, Book book)
             std::cout << "\nBook already exists in database!\n";
             break;
         }
-        // If string variables are empty in object book, then end of array has been reached. Therefore we add book to the end of array.
-        else if ((books[i].getAuthorName() == "") && (books[i].getTitleName() == "") && (books[i].getPublisherName() == ""))
+        // If i = books_size - 1, it indicates we've reached end of array.
+        else if (i == books_size - 1)
         {
-            books[i] = book;
+            books.push_back(book);
             std::cout << "\nBook added successfully!\n";
             break;
         }
@@ -134,7 +147,7 @@ void addBookToArray(Book books[], int books_size, Book book)
 }
 
 // Function to check if book exists in database. Used in serval other functions (e.g. edit book details, find book details)
-int existsInArray(Book books[], int books_size)
+int existsInVector(std::vector<Book>& books, int books_size)
 {
     std::string title;
     std::string author;
@@ -157,9 +170,9 @@ int existsInArray(Book books[], int books_size)
     return -1;
 }
 
-void buyBook(Book books[], int books_size)
+void buyBook(std::vector<Book>& books, int books_size)
 {
-    int index = existsInArray(books, books_size);
+    int index = existsInVector(books, books_size);
     if (index > -1)
     {
         int requested_number = 0;
@@ -188,9 +201,9 @@ void buyBook(Book books[], int books_size)
     std::cout << "\nBook does not exist!\n";
 }
 
-void searchForBook(Book books[], int books_size)
+void searchForBook(std::vector<Book>& books, int books_size)
 {
-    int index = existsInArray(books, books_size);
+    int index = existsInVector(books, books_size);
 
     if (index > -1)
     {
@@ -205,9 +218,9 @@ void searchForBook(Book books[], int books_size)
     std::cout << "Book not found!\n";
 }
 
-void changeBookDetails(Book books[], int books_size)
+void changeBookDetails(std::vector<Book>& books, int books_size)
 {
-    int index = existsInArray(books, books_size);
+    int index = existsInVector(books, books_size);
 
     if (index > -1)
     {
@@ -283,23 +296,96 @@ void changeBookDetails(Book books[], int books_size)
     std::cout << "\nBook does not exist!\n";
 }
 
-void importBookList() {
+void importBookList(std::vector<Book>& books) {
 
+    //Opening text file containing book details
+    std::ifstream myfile;
+    myfile.open("book_list");
+    std::string text = " ";
+
+    //Getting number of lines in text file
+    int lines = 0;
+    while(getline(myfile, text)) {
+        if (text != " ") {
+            ++lines;
+            continue;
+        }
+    }
+
+    //Returning to the top of the text file
+    myfile.clear();
+    myfile.seekg(0);
+
+    //Declaring dynamic array
+    std::string *temp = new std::string[lines];
+
+    //Add data to dynamic array
+    for (int i = 0; getline(myfile, text); i++) {
+        if (text != "") {
+            temp[i] = text;
+        }
+    }
+
+    //Create Book object from dynamic array
+    for (int i = 0; i < lines; i += 6) {
+        Book new_book;
+
+        std::string title = temp[i];
+        new_book.setTitleName(temp[i]);
+
+        std::string author = temp[i+1];
+        new_book.setAuthorName(temp[i+1]);
+
+        std::string publisher = temp[i+2];
+        new_book.setPublisherName(temp[i+2]);
+
+        float price = stof(temp[i+3]);
+        new_book.setPrice(price);
+
+        int copies = stof(temp[i+4]);
+        new_book.setNumberOfCopies(std::stof(temp[i+4]));
+        books.push_back(new_book);
+    }
+    myfile.close();
+    delete[] temp;
 }
 
-void exportBookList() {
-    
+void exportBookList(std::vector<Book>& books) {
+    std::ofstream myfile;
+    myfile.open("book_list");
+
+    // Iterating through each book in books, and writing to book_list.
+    for (Book book: books) {
+        myfile << book.getTitleName() << "\n";
+        myfile << book.getAuthorName() << "\n";
+        myfile << book.getPublisherName() << "\n";
+        myfile << book.getPrice() << "\n";
+        myfile << book.getNumberOfCopies() << "\n";
+        myfile << "\n";
+    }
+    myfile.close();
+    std::cout << "\nExport completed!\n";
+}
+
+void printAllBooks(std::vector<Book>& books) {
+    for (Book book : books) {
+        book.printDetails();
+    }
 }
 
 void run()
 {
-    int user_selection = 0;
+    int user_selection = -1;
+    int number_of_records = 0;
 
     // Array to hold book objects.
     std::vector<Book> books;
+    // Importing book list from text file.
+    importBookList(books);
 
-    while (user_selection != 5)
+    while (user_selection != 0)
     {
+        number_of_records = books.size();
         printMenu();
         std::cin.clear();
         std::cin >> user_selection;
@@ -327,9 +413,19 @@ void run()
             changeBookDetails(books, number_of_records);
             break;
         }
+        case 5:
+        {
+            printAllBooks(books);
+            break;
+        }
+        case 6:
+        {
+            exportBookList(books);
+            break;
+        }
         }
     }
-    delete [] books;
+    books.clear();
 }
 
 int main()
