@@ -1,0 +1,6 @@
+Hello World. My name is Matthew.
+This is a test file.
+If there are duplicates, you will find it at the end of the file of read_files_2;
+However, anything that are not words, such as . , [ _ will not be considered as a word, hence, omitted from the list.
+
+For example, there should be 10 duplicates for the word snake. Check in the second file to confirm!
