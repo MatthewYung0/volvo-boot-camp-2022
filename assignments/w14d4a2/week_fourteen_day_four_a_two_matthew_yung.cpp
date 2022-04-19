@@ -69,7 +69,7 @@ int main()
     {
         return 0;
     }
-    std::bitset<3> front(toBinary(front_input));
+    std::bitset<3> front(front_input);
     std::cout << front << std::endl;
 
     // Rear distance bit calculation
