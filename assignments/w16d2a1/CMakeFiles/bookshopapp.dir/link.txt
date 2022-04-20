@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/bookshopapp.dir/main.o CMakeFiles/bookshopapp.dir/book_functions.o CMakeFiles/bookshopapp.dir/Book.o  -o bookshopapp 
