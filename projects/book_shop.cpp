@@ -87,13 +87,10 @@ public:
         std::cin.ignore();
         std::cout << "\nEnter Author Name: ";
         std::getline(std::cin, this->author_name);
-        std::cin.clear();
         std::cout << "Enter Title Name: ";
         std::getline(std::cin, this->title_name);
-        std::cin.clear();
         std::cout << "Enter Publisher Name: ";
         std::getline(std::cin, this->publisher_name);
-        std::cin.clear();
         std::cout << "Enter Price (sek): ";
         std::cin >> this->price;
         std::cin.clear();
@@ -117,11 +114,11 @@ void printMenu()
 
 void printEditDetailsMenu()
 {
-    std::cout << "\n1. Title: " << std::endl;
-    std::cout << "2. Author: " << std::endl;
-    std::cout << "3. Publisher: " << std::endl;
-    std::cout << "4. Price: " << std::endl;
-    std::cout << "5. Number Of Copies: " << std::endl;
+    std::cout << "\n1. Title " << std::endl;
+    std::cout << "2. Author " << std::endl;
+    std::cout << "3. Publisher " << std::endl;
+    std::cout << "4. Price " << std::endl;
+    std::cout << "5. Number Of Copies " << std::endl;
     std::cout << "6. Exit. " << std::endl << std::endl;
     std::cout << "Enter your choice: ";
 }
@@ -151,11 +148,9 @@ int existsInVector(std::vector<Book>& books, int books_size)
 {
     std::string title;
     std::string author;
-    std::cin.clear();
     std::cin.ignore();
     std::cout << "\nEnter Title Of Book: ";
     std::getline(std::cin, title);
-    std::cin.clear();
     std::cout << "Enter Author Of Book: ";
     std::getline(std::cin, author);
     std::cin.clear();
@@ -176,7 +171,6 @@ void buyBook(std::vector<Book>& books, int books_size)
     if (index > -1)
     {
         int requested_number = 0;
-        std::cin.clear();
         std::cout << "Enter Number Of Books to Buy: ";
         std::cin >> requested_number;
         if (books[index].getNumberOfCopies() > requested_number)
@@ -197,6 +191,7 @@ void buyBook(std::vector<Book>& books, int books_size)
             return;
         }
     }
+    std::cin.clear();
     // If book doesn't exist, return error.
     std::cout << "\nBook does not exist!\n";
 }
@@ -232,7 +227,7 @@ void changeBookDetails(std::vector<Book>& books, int books_size)
         // Menu for selection which attribute to modify
         while (user_selection != 6)
         {
-            std::cout << "\nSelect one of the following options";
+            std::cout << "\nSelect one of the following options to edit";
             printEditDetailsMenu();
             std::cin.clear();
             std::cin >> user_selection;
@@ -242,7 +237,6 @@ void changeBookDetails(std::vector<Book>& books, int books_size)
             {
                 std::cout << "\nCurrent Title: " << books[index].getTitleName() << std::endl;
                 std::cout << "New Title: ";
-                std::cin.clear();
                 std::cin.ignore();
                 std::getline(std::cin, string_input);
                 books[index].setTitleName(string_input);
@@ -252,7 +246,6 @@ void changeBookDetails(std::vector<Book>& books, int books_size)
             {
                 std::cout << "\nCurrent Author: " << books[index].getAuthorName() << std::endl;
                 std::cout << "New Author: ";
-                std::cin.clear();
                 std::cin.ignore();
                 std::getline(std::cin, string_input);
                 books[index].setAuthorName(string_input);
@@ -262,7 +255,6 @@ void changeBookDetails(std::vector<Book>& books, int books_size)
             {
                 std::cout << "\nCurrent Publisher: " << books[index].getPublisherName() << std::endl;
                 std::cout << "New Publisher: ";
-                std::cin.clear();
                 std::cin.ignore();
                 std::getline(std::cin, string_input);
                 books[index].setPublisherName(string_input);
@@ -273,7 +265,6 @@ void changeBookDetails(std::vector<Book>& books, int books_size)
                 std::cout << "\nCurrent Price: " << books[index].getPrice() << std::endl
                           << "sek";
                 std::cout << "New Price: ";
-                std::cin.clear();
                 std::cin.ignore();
                 std::cin >> new_price;
                 books[index].setPrice(new_price);
@@ -283,7 +274,6 @@ void changeBookDetails(std::vector<Book>& books, int books_size)
             {
                 std::cout << "\nCurrent Number Of Copies: " << books[index].getNumberOfCopies() << std::endl;
                 std::cout << "New Number Of Copies: ";
-                std::cin.clear();
                 std::cin.ignore();
                 std::cin >> number_of_copies;
                 books[index].setNumberOfCopies(number_of_copies);
