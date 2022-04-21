@@ -123,7 +123,7 @@ void printEditDetailsMenu()
     std::cout << "Enter your choice: ";
 }
 
-void addBookToArray(std::vector<Book>& books, int books_size, Book book)
+void addBookToArray(std::vector<Book>& books, const int books_size, const Book book)
 {
     for (int i = 0; i < books_size; i++)
     {
@@ -144,7 +144,7 @@ void addBookToArray(std::vector<Book>& books, int books_size, Book book)
 }
 
 // Function to check if book exists in database. Used in serval other functions (e.g. edit book details, find book details)
-int existsInVector(std::vector<Book>& books, int books_size)
+int existsInVector(std::vector<Book>& books, const int books_size)
 {
     std::string title;
     std::string author;
@@ -165,7 +165,7 @@ int existsInVector(std::vector<Book>& books, int books_size)
     return -1;
 }
 
-void buyBook(std::vector<Book>& books, int books_size)
+void buyBook(std::vector<Book>& books, const int books_size)
 {
     int index = existsInVector(books, books_size);
     if (index > -1)
@@ -196,7 +196,7 @@ void buyBook(std::vector<Book>& books, int books_size)
     std::cout << "\nBook does not exist!\n";
 }
 
-void searchForBook(std::vector<Book>& books, int books_size)
+void searchForBook(std::vector<Book>& books, const int books_size)
 {
     int index = existsInVector(books, books_size);
 
@@ -213,7 +213,7 @@ void searchForBook(std::vector<Book>& books, int books_size)
     std::cout << "Book not found!\n";
 }
 
-void changeBookDetails(std::vector<Book>& books, int books_size)
+void changeBookDetails(std::vector<Book>& books, const int books_size)
 {
     int index = existsInVector(books, books_size);
 

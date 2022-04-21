@@ -8,14 +8,14 @@
 
 class Book
 {
-public:
+private:
     std::string author_name;
     std::string title_name;
     std::string publisher_name;
     float price;
     int number_of_copies;
 
-// public:
+public:
     Book();
     Book(std::string author_name, std::string title_name, std::string publisher_name, float price, int number_of_copies);
     ~Book();
