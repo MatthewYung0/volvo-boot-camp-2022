@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/BookShopApp.dir/main.cpp.o  -o BookShopApp  -Wl,-rpath,/home/myung/repos/volvo-boot-camp-2022/projects/book_shop_project_final/build libbookshoplib.so 
