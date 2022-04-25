@@ -1,16 +1,21 @@
 cmake_minimum_required(VERSION 3.10)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-project(book_shop_app VERSION 1.0)
-
-file(GLOB_RECURSE SRC_FILES src/*.cpp)
-
-add_executable(book_shop_app main.cpp ${SRC_FILES})
-target_include_directories(book_shop_app PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
-
-# cmake_minimum_required(VERSION 2.4)
-
-# project(bookshop)
-
-# include_directories(${PROJECT_SOURCE_DIR})
-# add_executable(bookshop_app main.cpp Book.cpp checkInput.cpp printMenu.cpp printEditDetailsMenu.cpp addBookToArray.cpp buyBook.cpp searchForBook.cpp changeBookDetails.cpp importBookList.cpp exportBookList.cpp printAllBooks.cpp run.cpp)
+project(BookShopApp VERSION 1.0)
+add_library(bookshoplib SHARED
+                               src/addBookToArray.cpp
+                               src/Book.cpp
+                               src/buyBook.cpp
+                               src/changeBookDetails.cpp
+                               src/checkInput.cpp
+                               src/existsInVector.cpp
+                               src/exportBookList.cpp
+                               src/importBookList.cpp
+                               src/printAllBooks.cpp
+                               src/printEditDetailsMenu.cpp
+                               src/printMenu.cpp
+                               src/run.cpp
+                               src/searchForBook.cpp)
+target_include_directories(bookshoplib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+add_executable(BookShopApp main.cpp)
+target_link_libraries(BookShopApp PUBLIC bookshoplib)
