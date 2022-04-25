@@ -16,6 +16,6 @@ add_library(bookshoplib SHARED
                                src/printMenu.cpp
                                src/run.cpp
                                src/searchForBook.cpp)
-target_include_directories(bookshoplib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_include_directories(bookshoplib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/header)
 add_executable(BookShopApp main.cpp)
 target_link_libraries(BookShopApp PUBLIC bookshoplib)
