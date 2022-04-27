@@ -1,6 +1,5 @@
-#include <ncurses.h>
+#include <curses.h>
 #include <iostream>
-#include <unistd.h>
 
 using namespace std;
 
@@ -19,7 +18,6 @@ int main() {
              cout << "Input is " << ch << endl;
          }
     }
-
     cout << "Hello World!" << endl;
 
     endwin();
