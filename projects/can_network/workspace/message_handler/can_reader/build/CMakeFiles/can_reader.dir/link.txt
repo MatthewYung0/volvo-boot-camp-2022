@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/can_reader.dir/main.cpp.o  -o can_reader  -Wl,-rpath,/home/myung/repos/volvo-boot-camp-2022/projects/can_network/workspace/message_handler/can_reader/build libcan_reader_lib.so -lcurses 

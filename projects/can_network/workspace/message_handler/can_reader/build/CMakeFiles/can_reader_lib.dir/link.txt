@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC   -shared -Wl,-soname,libcan_reader_lib.so -o libcan_reader_lib.so CMakeFiles/can_reader_lib.dir/src/can_message.cpp.o CMakeFiles/can_reader_lib.dir/src/socket_can_setup.cpp.o CMakeFiles/can_reader_lib.dir/src/socket_can.cpp.o 

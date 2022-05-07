@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/can_message.h
+socket_can.h
+../include/socket_can.h
+
+../include/socket_can.h
+string
+-
+linux/can.h
+-
+
+../include/socket_can_setup.h
+socket_can.h
+../include/socket_can.h
+can_message.h
+../include/can_message.h
+
+/home/myung/repos/volvo-boot-camp-2022/projects/can_network/workspace/message_handler/can_reader/main.cpp
+curses.h
+-
+iostream
+-
+socket_can.h
+/home/myung/repos/volvo-boot-camp-2022/projects/can_network/workspace/message_handler/can_reader/socket_can.h
+can_message.h
+/home/myung/repos/volvo-boot-camp-2022/projects/can_network/workspace/message_handler/can_reader/can_message.h
+socket_can_setup.h
+/home/myung/repos/volvo-boot-camp-2022/projects/can_network/workspace/message_handler/can_reader/socket_can_setup.h
+

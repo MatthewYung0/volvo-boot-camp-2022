@@ -1,4 +1,0 @@
-/home/myung/repos/volvo-boot-camp-2022/projects/book_shop_project_final/build/CMakeFiles/edit_cache.dir
-/home/myung/repos/volvo-boot-camp-2022/projects/book_shop_project_final/build/CMakeFiles/BookShopApp.dir
-/home/myung/repos/volvo-boot-camp-2022/projects/book_shop_project_final/build/CMakeFiles/rebuild_cache.dir
-/home/myung/repos/volvo-boot-camp-2022/projects/book_shop_project_final/build/CMakeFiles/bookshoplib.dir
