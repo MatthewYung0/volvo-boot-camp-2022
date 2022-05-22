@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/myung/repos/volvo-boot-camp-2022/projects/can_network'
+make: Leaving directory '/home/myung/repos/volvo-boot-camp-2022/projects/can_network'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+

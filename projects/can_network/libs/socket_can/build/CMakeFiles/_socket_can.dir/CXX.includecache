@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/socket_can.h
+string
+-
+linux/can.h
+-
+
+/home/myung/repos/volvo-boot-camp-2022/projects/can_network/libs/socket_can/src/socket_can.cpp
+socket_can.h
+/home/myung/repos/volvo-boot-camp-2022/projects/can_network/libs/socket_can/src/socket_can.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+unistd.h
+-
+net/if.h
+-
+sys/ioctl.h
+-
+sys/socket.h
+-
+linux/can/raw.h
+-
+

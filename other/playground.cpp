@@ -1,128 +1,47 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
+#include <pthread.h>
 #include <iostream>
+#include <thread>
+#include <mutex>
+#include <chrono>
 
-using namespace std;
-//Implement the class Box  
-//l,b,h are integers representing the dimensions of the box
+std::mutex global_mu;
 
-// The class should have the following functions : 
-
-// Constructors: 
-// Box();
-// Box(int,int,int);
-// Box(Box);
-
-
-// int getLength(); // Return box's length
-// int getBreadth (); // Return box's breadth
-// int getHeight ();  //Return box's height
-// long long CalculateVolume(); // Return the volume of the box
-
-//Overload operator < as specified
-//bool operator<(Box& b)
-
-//Overload operator << as specified
-//ostream& operator<<(ostream& out, Box& B)
-
-class Box {
-    private:
-    int l;
-    int b;
-    int h;
-    
-    public:
-    Box(){};
-    Box(const Box &B) {
-        this->l = B.l;
-        this->b = B.b;
-        this->h = B.h;
-    }
-    Box(int length, int bredth, int height) {
-        this->l = length;
-        this->b = bredth;
-        this->h = height;
-    }
-
-    int getLength() {
-        return l;
-    }
-    int getBredth() {
-        return b;
-    }
-    int getHeight() {
-        return h;
-    }
-    long long CalculateVolume() {
-        return l * b * h;
-    }
-
-    friend bool operator<(const Box &A, const Box &B)
-    {       
-		if (A.l < B.l) {
-			return true;
-		} else if (A.b < B.b && A.l < B.l) {
-			return true;
-		} else if (A.h < B.h && A.b == B.b && A.l == B.l) {
-			return true;
-		}
-		return false;
-    }
-
-	friend ostream& operator<<(ostream &output, const Box &B) {
-		output << B.l << " " << B.b << " " << B.h;
-	}
-};
-
-
-void check2()
+void generateRandomNum(int min, int max, int *number)
 {
-	int n;
-	cin>>n;
-	Box temp;
-	for(int i=0;i<n;i++)
-	{
-		int type;
-		cin>>type;
-		if(type ==1)
-		{
-			cout<<temp<<endl;
-		}
-		if(type == 2)
-		{
-			int l,b,h;
-			cin>>l>>b>>h;
-			Box NewBox(l,b,h);
-			temp=NewBox;
-			cout<<temp<<endl;
-		}
-		if(type==3)
-		{
-			int l,b,h;
-			cin>>l>>b>>h;
-			Box NewBox(l,b,h);
-			if(NewBox<temp)
-			{
-				cout<<"Lesser\n";
-			}
-			else
-			{
-				cout<<"Greater\n";
-			}
-		}
-		if(type==4)
-		{
-			cout<<temp.CalculateVolume()<<endl;
-		}
-		if(type==5)
-		{
-			Box NewBox(temp);
-			cout<<NewBox<<endl;
-		}
-
-	}
+    while (true) {
+    global_mu.lock();
+    std::random_device rd;
+    std::mt19937 rng(rd());
+    std::uniform_int_distribution<int> uni(min, max);
+    *number = uni(rng);
+    global_mu.unlock();
+    }
 }
 
 int main()
 {
-	check2();
+    int *int_pointer;
+    int number = 0;
+    int_pointer = &number;
+
+    std::thread t1(generateRandomNum, 0, 3000, int_pointer);
+	t1.detach();
+
+    while(true) {
+		std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+        global_mu.lock();
+        std::cout << *int_pointer << std::endl;
+        global_mu.unlock();
+    }
 }
+
+
+	
+
+	// std::thread t1(generateRandomNum, 0, 3000, int_pointer);
+
+	// while (true) {
+	// 	std::cout << int_pointer << std::endl;
+	// }
+	// t1.detach();

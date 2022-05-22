@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC   -shared -Wl,-soname,libinput_handler_lib.so -o libinput_handler_lib.so CMakeFiles/input_handler_lib.dir/src/can_message.cpp.o CMakeFiles/input_handler_lib.dir/src/check_input.cpp.o CMakeFiles/input_handler_lib.dir/src/socket_can_setup.cpp.o CMakeFiles/input_handler_lib.dir/src/socket_can.cpp.o 

@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../../../libs/common/variables.h
+string
+-
+
+../../../libs/socket_can/include/socket_can.h
+string
+-
+linux/can.h
+-
+
+../include/check_valid_keys.h
+
+../include/set_frame.h
+variables.h
+../include/variables.h
+socket_can.h
+../include/socket_can.h
+
+/home/myung/repos/volvo-boot-camp-2022/projects/can_network/apps/input_handler/main.cpp
+curses.h
+-
+iostream
+-
+chrono
+-
+thread
+-
+cassert
+-
+check_valid_keys.h
+/home/myung/repos/volvo-boot-camp-2022/projects/can_network/apps/input_handler/check_valid_keys.h
+variables.h
+/home/myung/repos/volvo-boot-camp-2022/projects/can_network/apps/input_handler/variables.h
+socket_can.h
+/home/myung/repos/volvo-boot-camp-2022/projects/can_network/apps/input_handler/socket_can.h
+set_frame.h
+/home/myung/repos/volvo-boot-camp-2022/projects/can_network/apps/input_handler/set_frame.h
+

@@ -1,0 +1,2 @@
+/usr/bin/ar qc lib_sock_can.a  CMakeFiles/_sock_can.dir/home/myung/repos/volvo-boot-camp-2022/projects/can_network/libs/socket_can/src/socket_can.cpp.o
+/usr/bin/ranlib lib_sock_can.a

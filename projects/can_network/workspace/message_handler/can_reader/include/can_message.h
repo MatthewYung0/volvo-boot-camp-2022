@@ -10,7 +10,6 @@ class CanMessage {
     private:
         scpp::CanFrame frame;
         bool ignition_state{};
-
         void SetGearDrive();
         void SetGearRear();
         void SetGearNeutral();

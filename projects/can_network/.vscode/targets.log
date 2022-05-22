@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed May 11 14:39:35 2022
+# Make data base, printed on Thu May 19 10:07:55 2022
 
 # Variables
 
@@ -41,15 +43,15 @@ GDMSESSION = ubuntu
 # environment
 XMODIFIERS = @im=ibus
 # makefile
-CURDIR := /home/myung/repos/volvo-boot-camp-2022/projects/can_network/workspace
+CURDIR := /home/myung/repos/volvo-boot-camp-2022/projects/can_network
 # makefile
 SHELL = /bin/sh
 # environment
-SNAP_DATA = /var/snap/code/96
+SNAP_DATA = /var/snap/code/97
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:58258
+JOURNAL_STREAM = 8:66853
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # environment
@@ -79,9 +81,9 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 DISPLAY = :1
 # environment
-_ = /snap/code/96/usr/share/code/code
+_ = /snap/code/97/usr/share/code/code
 # environment
-MANAGERPID = 3027
+MANAGERPID = 3102
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -89,7 +91,7 @@ LC_NAME = sv_SE.UTF-8
 # environment
 VSCODE_CWD = /home/myung
 # environment
-GSETTINGS_SCHEMA_DIR = /snap/code/96/usr/share/glib-2.0/schemas
+GSETTINGS_SCHEMA_DIR = /snap/code/97/usr/share/glib-2.0/schemas
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -97,15 +99,15 @@ NO_PROXY = localhost,127.0.0.*,.volvocars.net,.volvocars.biz,*
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/5CD01350N0:@/tmp/.ICE-unix/3286,unix/5CD01350N0:/tmp/.ICE-unix/3286
+SESSION_MANAGER = local/5CD01350N0:@/tmp/.ICE-unix/3362,unix/5CD01350N0:/tmp/.ICE-unix/3362
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/myung/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-SNAP = /snap/code/96
+SNAP = /snap/code/97
 # environment
-SNAP_VERSION = da15b6fd
+SNAP_VERSION = c3511e6c
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
@@ -115,9 +117,9 @@ DISABLE_WAYLAND = 1
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 050cf5867b0f4ce18bde9a117cd59d9f
+INVOCATION_ID = aefd4aa4e43d43f0a67f2c47d1b9c4e2
 # environment
-GDK_PIXBUF_MODULEDIR = /snap/code/96/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+GDK_PIXBUF_MODULEDIR = /snap/code/97/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -127,7 +129,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 48945
+GIO_LAUNCHED_DESKTOP_FILE_PID = 39540
 # automatic
 %F = $(notdir $%)
 # environment
@@ -139,11 +141,11 @@ VSCODE_PIPE_LOGGING = true
 # environment
 SNAP_INSTANCE_KEY = 
 # environment
-PWD = /home/myung/repos/volvo-boot-camp-2022/projects/can_network/workspace
+PWD = /home/myung/repos/volvo-boot-camp-2022/projects/can_network
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 3251
+SSH_AGENT_PID = 3327
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -157,7 +159,7 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 VSCODE_CLI = 1
 # environment
-VSCODE_CODE_CACHE_PATH = /home/myung/.config/Code/CachedData/da15b6fd3ef856477bf6f4fb29ba1b7af717770d
+VSCODE_CODE_CACHE_PATH = /home/myung/.config/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
 # environment
 LOGNAME = myung
 # environment
@@ -189,19 +191,19 @@ MAKECMDGOALS := all
 # environment
 PATH = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 # environment
-SNAP_USER_DATA = /home/myung/snap/code/96
+SNAP_USER_DATA = /home/myung/snap/code/97
 # environment
 SHLVL = 0
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-db84d5d3-1ebb-4270-9efc-9539889ce285.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-13048b69-90ff-4095-9f62-231623f91eaf.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
 USER = myung
 # environment
-SNAP_REVISION = 96
+SNAP_REVISION = 97
 # environment
 LC_MONETARY = sv_SE.UTF-8
 # makefile
@@ -221,7 +223,7 @@ MAKE_COMMAND := make
 # environment
 LANGUAGE = en_US:
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-d0777d4e-1.67.1-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-d0777d4e-1.67.2-main.sock
 # environment
 BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
 # makefile
@@ -236,8 +238,6 @@ MFLAGS = -pqrR
 GDK_BACKEND = x11
 # environment
 LC_PAPER = sv_SE.UTF-8
-# environment
-NO_AT_BRIDGE = 1
 # environment
 HTTP_PROXY = http://127.0.0.1:3128
 # environment
@@ -278,11 +278,9 @@ WINDOWPATH = 2
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # environment
 GJS_DEBUG_OUTPUT = stderr
- 
-make: *** No rule to make target 'all'.  Stop.
-
 # default
 .RECIPEPREFIX := 
+ 
 # environment
 http_proxy = http://127.0.0.1:3128
 # environment
@@ -290,9 +288,9 @@ LC_ADDRESS = sv_SE.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 43475
+VSCODE_PID = 39592
 # variable set hash-table stats:
-# Load=139/1024=14%, Rehash=0, Collisions=27/161=17%
+# Load=138/1024=13%, Rehash=0, Collisions=27/160=17%
 
 # Pattern-specific Variable Values
 
@@ -300,9 +298,9 @@ VSCODE_PID = 43475
 
 # Directories
 
-# . (device 64769, inode 3278263): 6 files, no impossibilities.
+# . (device 64769, inode 3147385): 7 files, no impossibilities.
 
-# 6 files, no impossibilities in 1 directories.
+# 7 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -352,12 +350,12 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 14 / storage = 136 B / avg = 9 B
-# current buf: size = 8162 B / used = 136 B / count = 14 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 15 / storage = 139 B / avg = 9 B
+# current buf: size = 8162 B / used = 139 B / count = 15 / avg = 9 B
 
-# strcache performance: lookups = 17 / hit rate = 17%
+# strcache performance: lookups = 18 / hit rate = 16%
 # hash-table stats:
-# Load=14/8192=0%, Rehash=0, Collisions=1/17=6%
-# Finished Make data base on Wed May 11 14:39:35 2022
+# Load=15/8192=0%, Rehash=0, Collisions=1/18=6%
+# Finished Make data base on Thu May 19 10:07:55 2022
 
  

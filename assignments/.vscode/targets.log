@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed May 11 14:39:35 2022
+# Make data base, printed on Thu May 12 10:07:00 2022
 
 # Variables
 
@@ -41,7 +41,7 @@ GDMSESSION = ubuntu
 # environment
 XMODIFIERS = @im=ibus
 # makefile
-CURDIR := /home/myung/repos/volvo-boot-camp-2022/projects/can_network/workspace
+CURDIR := /home/myung/repos/volvo-boot-camp-2022/assignments
 # makefile
 SHELL = /bin/sh
 # environment
@@ -49,7 +49,7 @@ SNAP_DATA = /var/snap/code/96
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:58258
+JOURNAL_STREAM = 8:71735
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # environment
@@ -81,7 +81,7 @@ DISPLAY = :1
 # environment
 _ = /snap/code/96/usr/share/code/code
 # environment
-MANAGERPID = 3027
+MANAGERPID = 3083
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -97,7 +97,7 @@ NO_PROXY = localhost,127.0.0.*,.volvocars.net,.volvocars.biz,*
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/5CD01350N0:@/tmp/.ICE-unix/3286,unix/5CD01350N0:/tmp/.ICE-unix/3286
+SESSION_MANAGER = local/5CD01350N0:@/tmp/.ICE-unix/3344,unix/5CD01350N0:/tmp/.ICE-unix/3344
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -115,7 +115,7 @@ DISABLE_WAYLAND = 1
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 050cf5867b0f4ce18bde9a117cd59d9f
+INVOCATION_ID = 9f13cd8d06354a9c84a24b6adf638477
 # environment
 GDK_PIXBUF_MODULEDIR = /snap/code/96/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
@@ -127,7 +127,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 48945
+GIO_LAUNCHED_DESKTOP_FILE_PID = 32562
 # automatic
 %F = $(notdir $%)
 # environment
@@ -139,11 +139,11 @@ VSCODE_PIPE_LOGGING = true
 # environment
 SNAP_INSTANCE_KEY = 
 # environment
-PWD = /home/myung/repos/volvo-boot-camp-2022/projects/can_network/workspace
+PWD = /home/myung/repos/volvo-boot-camp-2022/assignments
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 3251
+SSH_AGENT_PID = 3309
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -195,7 +195,7 @@ SHLVL = 0
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-db84d5d3-1ebb-4270-9efc-9539889ce285.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-0ecd2596-f6f9-4075-9a1e-071af280fada.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -290,7 +290,7 @@ LC_ADDRESS = sv_SE.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 43475
+VSCODE_PID = 30004
 # variable set hash-table stats:
 # Load=139/1024=14%, Rehash=0, Collisions=27/161=17%
 
@@ -300,9 +300,9 @@ VSCODE_PID = 43475
 
 # Directories
 
-# . (device 64769, inode 3278263): 6 files, no impossibilities.
+# . (device 64769, inode 3146861): 17 files, no impossibilities.
 
-# 6 files, no impossibilities in 1 directories.
+# 17 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -352,12 +352,12 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 14 / storage = 136 B / avg = 9 B
-# current buf: size = 8162 B / used = 136 B / count = 14 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 25 / storage = 210 B / avg = 8 B
+# current buf: size = 8162 B / used = 210 B / count = 25 / avg = 8 B
 
-# strcache performance: lookups = 17 / hit rate = 17%
+# strcache performance: lookups = 28 / hit rate = 10%
 # hash-table stats:
-# Load=14/8192=0%, Rehash=0, Collisions=1/17=6%
-# Finished Make data base on Wed May 11 14:39:35 2022
+# Load=25/8192=0%, Rehash=0, Collisions=1/28=4%
+# Finished Make data base on Thu May 12 10:07:00 2022
 
  
